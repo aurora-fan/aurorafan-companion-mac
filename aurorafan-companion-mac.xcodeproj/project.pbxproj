@@ -11,6 +11,10 @@
 		4C08AF8B23A3F91B005C81D3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C08AF8A23A3F91B005C81D3 /* ViewController.swift */; };
 		4C08AF8D23A3F91D005C81D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C08AF8C23A3F91D005C81D3 /* Assets.xcassets */; };
 		4C08AF9023A3F91D005C81D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C08AF8E23A3F91D005C81D3 /* Main.storyboard */; };
+		4C08AF9B23A448B7005C81D3 /* FanConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C08AF9A23A448B7005C81D3 /* FanConnection.swift */; };
+		4C08AFA023A45453005C81D3 /* TempiFFT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C08AF9F23A45453005C81D3 /* TempiFFT.swift */; };
+		4C08AFA223A45F5A005C81D3 /* MusicVisualizerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C08AFA123A45F5A005C81D3 /* MusicVisualizerController.swift */; };
+		4C08AFA423A489B6005C81D3 /* FFT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C08AFA323A489B6005C81D3 /* FFT.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +25,10 @@
 		4C08AF8F23A3F91D005C81D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4C08AF9123A3F91D005C81D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C08AF9223A3F91D005C81D3 /* aurorafan_companion_mac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = aurorafan_companion_mac.entitlements; sourceTree = "<group>"; };
+		4C08AF9A23A448B7005C81D3 /* FanConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FanConnection.swift; sourceTree = "<group>"; };
+		4C08AF9F23A45453005C81D3 /* TempiFFT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempiFFT.swift; sourceTree = "<group>"; };
+		4C08AFA123A45F5A005C81D3 /* MusicVisualizerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicVisualizerController.swift; sourceTree = "<group>"; };
+		4C08AFA323A489B6005C81D3 /* FFT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFT.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +61,9 @@
 		4C08AF8723A3F91B005C81D3 /* aurorafan-companion-mac */ = {
 			isa = PBXGroup;
 			children = (
+				4C08AF9C23A45423005C81D3 /* Fourier Transform */,
+				4C08AF9923A44888005C81D3 /* Fan Interaction */,
+				4C08AF9823A4487E005C81D3 /* View Controllers */,
 				4C08AF8823A3F91B005C81D3 /* AppDelegate.swift */,
 				4C08AF8A23A3F91B005C81D3 /* ViewController.swift */,
 				4C08AF8C23A3F91D005C81D3 /* Assets.xcassets */,
@@ -61,6 +72,31 @@
 				4C08AF9223A3F91D005C81D3 /* aurorafan_companion_mac.entitlements */,
 			);
 			path = "aurorafan-companion-mac";
+			sourceTree = "<group>";
+		};
+		4C08AF9823A4487E005C81D3 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4C08AFA123A45F5A005C81D3 /* MusicVisualizerController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		4C08AF9923A44888005C81D3 /* Fan Interaction */ = {
+			isa = PBXGroup;
+			children = (
+				4C08AF9A23A448B7005C81D3 /* FanConnection.swift */,
+			);
+			path = "Fan Interaction";
+			sourceTree = "<group>";
+		};
+		4C08AF9C23A45423005C81D3 /* Fourier Transform */ = {
+			isa = PBXGroup;
+			children = (
+				4C08AF9F23A45453005C81D3 /* TempiFFT.swift */,
+				4C08AFA323A489B6005C81D3 /* FFT.swift */,
+			);
+			path = "Fourier Transform";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,8 +169,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C08AF9B23A448B7005C81D3 /* FanConnection.swift in Sources */,
+				4C08AFA023A45453005C81D3 /* TempiFFT.swift in Sources */,
 				4C08AF8B23A3F91B005C81D3 /* ViewController.swift in Sources */,
+				4C08AFA423A489B6005C81D3 /* FFT.swift in Sources */,
 				4C08AF8923A3F91B005C81D3 /* AppDelegate.swift in Sources */,
+				4C08AFA223A45F5A005C81D3 /* MusicVisualizerController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

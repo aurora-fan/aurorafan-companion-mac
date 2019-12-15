@@ -11,10 +11,10 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-
+	static var fan: FanConnection?
 
 	func applicationDidFinishLaunching(_ aNotification: Notification) {
-		// Insert code here to initialize your application
+		AppDelegate.fan = FanConnection(serialPath: "/dev/cu.wchusbserial142110", baudRate: 115200)
 	}
 
 	func applicationWillTerminate(_ aNotification: Notification) {

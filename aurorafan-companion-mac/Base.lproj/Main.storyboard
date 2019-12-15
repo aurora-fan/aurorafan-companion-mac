@@ -767,7 +767,7 @@
         <!--Text-->
         <scene sceneID="Lwg-d5-QyT">
             <objects>
-                <viewController title="Text" id="hbs-Qj-usO" sceneMemberID="viewController">
+                <viewController title="Text" id="hbs-Qj-usO" customClass="TextController" customModule="aurorafan_companion_mac" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="07Q-L7-Jo5">
                         <rect key="frame" x="0.0" y="0.0" width="456" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -798,6 +798,9 @@
                                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                         <font key="font" metaFont="system"/>
                                                     </buttonCell>
+                                                    <connections>
+                                                        <action selector="sendPressed:" target="hbs-Qj-usO" id="w0R-Qv-5Vt"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -836,6 +839,9 @@
                                                                         <constraint firstAttribute="width" constant="30" id="F92-Dc-nl5"/>
                                                                     </constraints>
                                                                     <color key="color" red="0.05813049898" green="0.055541899059999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <connections>
+                                                                        <action selector="colorWellChangedColor:" target="hbs-Qj-usO" id="N6c-vg-Sz5"/>
+                                                                    </connections>
                                                                 </colorWell>
                                                             </subviews>
                                                             <constraints>
@@ -921,6 +927,10 @@
                             <constraint firstAttribute="trailing" secondItem="TGA-Lu-qrZ" secondAttribute="trailing" constant="40" id="yBr-si-Lwo"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="colorWell" destination="lNz-ja-VHr" id="0Mr-Jb-HKp"/>
+                        <outlet property="textField" destination="OLY-dZ-D9x" id="bX8-kR-EO7"/>
+                    </connections>
                 </viewController>
                 <customObject id="AI0-L8-nri" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>

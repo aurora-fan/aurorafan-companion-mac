@@ -13,6 +13,8 @@ import os.log
 
 class MusicVisualizerController: NSViewController {
 	
+	private var visible = false
+	
 	let audioEngine = AVAudioEngine()
     let audioNode = AVAudioPlayerNode()
 	
@@ -54,14 +56,19 @@ class MusicVisualizerController: NSViewController {
 	
 	@IBAction func songPopupSelectionButtonPressed(_ sender: NSPopUpButton) {
 		stop()
-		
-		begin(file: songs[sender.indexOfSelectedItem].location!)
+		let song = songs[sender.indexOfSelectedItem]
+		begin(file: song.location!)
 		
 		play()
+		let text = friendlyDescriptionForMedia(song)
+		let stop = text.index(text.startIndex, offsetBy: 8)
+		AppDelegate.fan?.send(text: text.substring(to: stop), r: 255, g: 0, b: 255)
 	}
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
+		
+		AppDelegate.fan?.start()
 		
 		levels.forEach {
 			spectrumStackView.addArrangedSubview($0)
@@ -81,12 +88,16 @@ class MusicVisualizerController: NSViewController {
 				.map(friendlyDescriptionForMedia(_:)))
 			
 			audioEngine.mainMixerNode.installTap(onBus: 0, bufferSize: 1024, format: audioEngine.mainMixerNode.outputFormat(forBus: 0)) { (buffer, time) in
-				if time.audioTimeStamp.mSampleTime > self.previousTime + 0.5 {
-					let values = fftTransform(buffer: buffer, frameCount: 2048, numberOfBands: 50)
+				if time.audioTimeStamp.mSampleTime > self.previousTime + 1 && self.visible {
+					let values = fftTransform(buffer: buffer, frameCount: 2048, numberOfBands: 50).map {
+						UInt8(max(min(ceil(TempiFFT.toDB($0) / 4), 8), 0))
+					}
 
 					DispatchQueue.main.sync {
-						values[0..<50].enumerated().forEach { index, magnitude in
-							self.levels[index].floatValue = ceil(TempiFFT.toDB(magnitude) / 4)
+						AppDelegate.fan?.send(bytes: FanConnection.SerialHeaders.MVIZ_VALUES + values)
+						
+						values[0..<50].enumerated().forEach { index, level in
+							self.levels[index].floatValue = Float(level)
 						}
 					}
 
@@ -99,6 +110,16 @@ class MusicVisualizerController: NSViewController {
 			os_log("%@: Cannot read iTunes Library: %@", type: .error, self.description, error.localizedDescription)
 		}
     }
+	
+	override func viewDidAppear() {
+		visible = true
+		AppDelegate.fan?.send(bytes: FanConnection.SerialHeaders.MVIZ_PROGRAM_START)
+	}
+	
+	override func viewDidDisappear() {
+		visible = false
+		pause()
+	}
 	
 	private func begin(file: URL) {
         audioEngine.attach(audioNode)

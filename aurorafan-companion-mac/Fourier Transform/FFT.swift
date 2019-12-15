@@ -25,7 +25,7 @@ func fftTransform(buffer: AVAudioPCMBuffer, frameCount: Int, numberOfBands: Int)
 	fft.windowType = TempiFFTWindowType.hanning
 	fft.fftForward(transferBuffer)
 	
-	fft.calculateLinearBands(minFrequency: 0, maxFrequency: 10000, numberOfBands: numberOfBands)
+	fft.calculateLinearBands(minFrequency: 0, maxFrequency: 4000, numberOfBands: numberOfBands)
 	
 	return fft.bandMagnitudes
 }

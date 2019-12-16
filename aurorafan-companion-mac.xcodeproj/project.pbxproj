@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22432D8223A700C5007C72EF /* ClockController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22432D8123A700C5007C72EF /* ClockController.swift */; };
 		4C08AF8923A3F91B005C81D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C08AF8823A3F91B005C81D3 /* AppDelegate.swift */; };
 		4C08AF8B23A3F91B005C81D3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C08AF8A23A3F91B005C81D3 /* ViewController.swift */; };
 		4C08AF8D23A3F91D005C81D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C08AF8C23A3F91D005C81D3 /* Assets.xcassets */; };
@@ -52,6 +53,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		22432D8123A700C5007C72EF /* ClockController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockController.swift; sourceTree = "<group>"; };
 		4C08AF8523A3F91B005C81D3 /* aurorafan-companion-mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "aurorafan-companion-mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C08AF8823A3F91B005C81D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C08AF8A23A3F91B005C81D3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 			children = (
 				4C08AFA123A45F5A005C81D3 /* MusicVisualizerController.swift */,
 				4CF8FCE923A5BCAC006AD849 /* TextController.swift */,
+				22432D8123A700C5007C72EF /* ClockController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22432D8223A700C5007C72EF /* ClockController.swift in Sources */,
 				4C08AF9B23A448B7005C81D3 /* FanConnection.swift in Sources */,
 				4C08AFA023A45453005C81D3 /* TempiFFT.swift in Sources */,
 				4C08AF8B23A3F91B005C81D3 /* ViewController.swift in Sources */,

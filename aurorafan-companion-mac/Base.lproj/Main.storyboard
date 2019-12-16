@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14868"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15702"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -1080,7 +1080,7 @@
         <!--Clock-->
         <scene sceneID="fja-j4-3oY">
             <objects>
-                <viewController title="Clock" id="OnV-1o-TdF" sceneMemberID="viewController">
+                <viewController title="Clock" id="OnV-1o-TdF" customClass="ClockController" customModule="aurorafan_companion_mac" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="TQJ-FA-o32">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1137,6 +1137,9 @@
                                                                         <constraint firstAttribute="width" constant="30" id="63y-ZW-PZG"/>
                                                                     </constraints>
                                                                     <color key="color" red="0.05813049898" green="0.055541899059999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <connections>
+                                                                        <action selector="colorWellChangedColor:" target="OnV-1o-TdF" id="UDc-aA-Thg"/>
+                                                                    </connections>
                                                                 </colorWell>
                                                             </subviews>
                                                             <constraints>
@@ -1161,6 +1164,9 @@
                                                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                                         <font key="font" metaFont="system"/>
                                                                     </buttonCell>
+                                                                    <connections>
+                                                                        <action selector="militaryTimeBoxCheckChanged:" target="OnV-1o-TdF" id="SMh-ol-dOA"/>
+                                                                    </connections>
                                                                 </button>
                                                             </subviews>
                                                             <constraints>
@@ -1245,6 +1251,10 @@
                             <constraint firstAttribute="trailing" secondItem="83c-ol-zxf" secondAttribute="trailing" constant="40" id="ii2-DI-gbK"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="colorWell" destination="Drf-D8-ifS" id="FXb-2T-CAn"/>
+                        <outlet property="currentTimeDisplay" destination="jAG-OZ-bLR" id="G0o-eh-gEf"/>
+                    </connections>
                 </viewController>
                 <customObject id="ckt-LA-66g" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>

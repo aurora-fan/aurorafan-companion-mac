@@ -35,6 +35,14 @@ class TextController: NSViewController {
 			r: UInt8(color.redComponent * 255),
 			g: UInt8(color.greenComponent * 255),
 			b: UInt8(color.blueComponent * 255))
+		
+//		var test: [Pixel] = []
+//		for y in 0...51 {
+//			test.append(Pixel(x: 26, y: UInt8(y), r: y < 26 ? 0 : 255, g: 255, b: y == 0 ? 255 : 0))
+//		}
+		
+		
+//		AppDelegate.fan?.send(pixels: cloud, startingX: 10, startingY: 10)
 	}
 	
 	override func viewDidLoad() {

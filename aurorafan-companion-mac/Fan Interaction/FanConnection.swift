@@ -10,6 +10,18 @@ import Foundation
 import ORSSerial
 import os.log
 
+struct Pixel {
+	let x: UInt8
+	let y: UInt8
+	let r: UInt8
+	let g: UInt8
+	let b: UInt8
+	
+	func toBytes() -> [UInt8] {
+		return [x, y, r, g, b]
+	}
+}
+
 class FanConnection : NSObject {
 	
 	enum SerialHeaders {
@@ -22,6 +34,7 @@ class FanConnection : NSObject {
 		// Detail headers
 		static let TEXT: [UInt8] = [255, 254, 253, 252, 10]
 		static let MVIZ_VALUES: [UInt8] = [255, 254, 253, 252, 20]
+		static let PIXELS: [UInt8] = [255, 254, 253, 252, 30]
 	}
 	
 	private let port: ORSSerialPort
@@ -57,6 +70,18 @@ class FanConnection : NSObject {
 		]
 		
 		send(bytes: FanConnection.SerialHeaders.TEXT + headers + text.lowercased().utf8)
+	}
+	
+	func send(pixels: [Pixel], startingX: UInt8 = 0, startingY: UInt8 = 0) {
+		let headers: [UInt8] = [
+			startingX, startingY, UInt8(pixels.count / 16), UInt8(pixels.count % 16)
+		]
+		
+		let data = pixels
+			.map { $0.toBytes() }
+			.flatMap { $0 }
+		
+		send(bytes: FanConnection.SerialHeaders.PIXELS + headers + data)
 	}
 	
 }

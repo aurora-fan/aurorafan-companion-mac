@@ -18,6 +18,8 @@
 		4CF8FCE623A5559D006AD849 /* ORSSerial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CF8FCE223A5558A006AD849 /* ORSSerial.framework */; };
 		4CF8FCE723A5559D006AD849 /* ORSSerial.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4CF8FCE223A5558A006AD849 /* ORSSerial.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4CF8FCEA23A5BCAC006AD849 /* TextController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF8FCE923A5BCAC006AD849 /* TextController.swift */; };
+		4CF8FCEC23A6BCAE006AD849 /* AlignController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF8FCEB23A6BCAE006AD849 /* AlignController.swift */; };
+		4CF8FCEE23A6E138006AD849 /* Clouds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF8FCED23A6E138006AD849 /* Clouds.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		4C08AFA323A489B6005C81D3 /* FFT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFT.swift; sourceTree = "<group>"; };
 		4CF8FCDC23A5558A006AD849 /* ORSSerialPort.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ORSSerialPort.xcodeproj; path = "Frameworks/ORSSerialPort/Framework Project/ORSSerialPort.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		4CF8FCE923A5BCAC006AD849 /* TextController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextController.swift; sourceTree = "<group>"; };
+		4CF8FCEB23A6BCAE006AD849 /* AlignController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlignController.swift; sourceTree = "<group>"; };
+		4CF8FCED23A6E138006AD849 /* Clouds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clouds.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +120,7 @@
 		4C08AF9823A4487E005C81D3 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				4CF8FCEB23A6BCAE006AD849 /* AlignController.swift */,
 				4C08AFA123A45F5A005C81D3 /* MusicVisualizerController.swift */,
 				4CF8FCE923A5BCAC006AD849 /* TextController.swift */,
 			);
@@ -126,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				4C08AF9A23A448B7005C81D3 /* FanConnection.swift */,
+				4CF8FCED23A6E138006AD849 /* Clouds.swift */,
 			);
 			path = "Fan Interaction";
 			sourceTree = "<group>";
@@ -255,7 +261,9 @@
 				4C08AFA423A489B6005C81D3 /* FFT.swift in Sources */,
 				4C08AF8923A3F91B005C81D3 /* AppDelegate.swift in Sources */,
 				4C08AFA223A45F5A005C81D3 /* MusicVisualizerController.swift in Sources */,
+				4CF8FCEE23A6E138006AD849 /* Clouds.swift in Sources */,
 				4CF8FCEA23A5BCAC006AD849 /* TextController.swift in Sources */,
+				4CF8FCEC23A6BCAE006AD849 /* AlignController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

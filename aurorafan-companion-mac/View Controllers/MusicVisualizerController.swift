@@ -6,8 +6,8 @@
 //  Copyright © 2019 AuroraFan. All rights reserved.
 //
 
-import Cocoa
 import AVFoundation
+import Cocoa
 import iTunesLibrary
 import os.log
 
@@ -60,9 +60,7 @@ class MusicVisualizerController: NSViewController {
 		begin(file: song.location!)
 		
 		play()
-		let text = friendlyDescriptionForMedia(song)
-		let stop = text.index(text.startIndex, offsetBy: 8)
-		AppDelegate.fan?.send(text: text.substring(to: stop), r: 255, g: 0, b: 255)
+		AppDelegate.fan?.send(text: friendlyDescriptionForMedia(song), r: 255, g: 0, b: 255)
 	}
 	
 	override func viewDidLoad() {

@@ -53,7 +53,9 @@ class ClockController: NSViewController {
             var PM = false;
             if Int(hours)!>=12 {
                 PM = true
-                hours = String(Int(hours)!-12)
+				if Int(hours)!>12 {
+					hours = String(Int(hours)!-12)
+				}
             }
             else {
                 hours = String(Int(hours)!)

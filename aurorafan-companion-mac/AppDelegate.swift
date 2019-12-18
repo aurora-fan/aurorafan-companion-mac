@@ -14,7 +14,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	static var fan: FanConnection?
 
 	func applicationDidFinishLaunching(_ aNotification: Notification) {
-		AppDelegate.fan = FanConnection(serialPath: "/dev/cu.wchusbserial142110", baudRate: 115200)
+		AppDelegate.fan = FanConnection(serialPath: "/dev/cu.wchusbserial1430", baudRate: 115200)
 	}
 
 	func applicationWillTerminate(_ aNotification: Notification) {

@@ -97,7 +97,7 @@ class FanConnection : NSObject {
 	
 	func sendAnalogClock(hours: UInt8, minutes: UInt8, seconds: UInt8, r: UInt8, g: UInt8, b: UInt8) {
 		let headers: [UInt8] = [
-			hours, minutes, seconds, r, g, b
+			hours % 12, minutes, seconds, r, g, b
 		]
 		
 		send(bytes: FanConnection.SerialHeaders.ANALOG_CLOCK + headers)

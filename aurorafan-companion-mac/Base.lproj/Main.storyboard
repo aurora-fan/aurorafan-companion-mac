@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14868"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15702"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -1082,20 +1082,20 @@
             <objects>
                 <viewController title="Clock" id="OnV-1o-TdF" customClass="ClockController" customModule="aurorafan_companion_mac" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="TQJ-FA-o32">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <rect key="frame" x="0.0" y="0.0" width="474" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <stackView distribution="fillEqually" orientation="vertical" alignment="leading" spacing="24" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="83c-ol-zxf">
-                                <rect key="frame" x="40" y="20" width="370" height="260"/>
+                                <rect key="frame" x="40" y="20" width="394" height="260"/>
                                 <subviews>
                                     <box title="Current Time Display" translatesAutoresizingMaskIntoConstraints="NO" id="v4F-e8-rZ4">
-                                        <rect key="frame" x="-3" y="201" width="376" height="59"/>
+                                        <rect key="frame" x="-3" y="201" width="400" height="59"/>
                                         <view key="contentView" id="Oru-ii-MZ1">
-                                            <rect key="frame" x="3" y="3" width="370" height="41"/>
+                                            <rect key="frame" x="3" y="3" width="394" height="41"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="jAG-OZ-bLR">
-                                                    <rect key="frame" x="20" y="10" width="330" height="21"/>
+                                                    <rect key="frame" x="20" y="10" width="354" height="21"/>
                                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="VfX-36-Rgp">
                                                         <font key="font" usesAppearanceFont="YES"/>
                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -1111,131 +1111,202 @@
                                             </constraints>
                                         </view>
                                     </box>
-                                    <box title="Options" translatesAutoresizingMaskIntoConstraints="NO" id="5aU-it-HTy">
-                                        <rect key="frame" x="-3" y="-4" width="376" height="185"/>
-                                        <view key="contentView" id="O8m-Q7-tOI">
-                                            <rect key="frame" x="3" y="3" width="370" height="167"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                            <subviews>
-                                                <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FRL-1z-5j9">
-                                                    <rect key="frame" x="20" y="67" width="330" height="90"/>
+                                    <stackView distribution="fillEqually" orientation="horizontal" alignment="top" spacing="10" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="azD-Nf-Qh2">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="181"/>
+                                        <subviews>
+                                            <box title="Options" translatesAutoresizingMaskIntoConstraints="NO" id="5aU-it-HTy">
+                                                <rect key="frame" x="-3" y="16" width="198" height="165"/>
+                                                <view key="contentView" id="O8m-Q7-tOI">
+                                                    <rect key="frame" x="3" y="3" width="192" height="147"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
-                                                        <stackView distribution="fill" orientation="horizontal" alignment="centerY" spacing="224" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hrp-j5-Plg">
-                                                            <rect key="frame" x="0.0" y="60" width="330" height="30"/>
+                                                        <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FRL-1z-5j9">
+                                                            <rect key="frame" x="20" y="47" width="152" height="90"/>
                                                             <subviews>
-                                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="JkI-1a-OLz">
-                                                                    <rect key="frame" x="-2" y="7" width="80" height="16"/>
-                                                                    <textFieldCell key="cell" lineBreakMode="clipping" title="Text Color" id="dHX-mo-IxV">
-                                                                        <font key="font" usesAppearanceFont="YES"/>
-                                                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                                    </textFieldCell>
-                                                                </textField>
-                                                                <colorWell translatesAutoresizingMaskIntoConstraints="NO" id="Drf-D8-ifS">
-                                                                    <rect key="frame" x="300" y="0.0" width="30" height="30"/>
+                                                                <stackView distribution="equalSpacing" orientation="horizontal" alignment="centerY" spacing="20" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hrp-j5-Plg">
+                                                                    <rect key="frame" x="0.0" y="60" width="152" height="30"/>
+                                                                    <subviews>
+                                                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="JkI-1a-OLz">
+                                                                            <rect key="frame" x="-2" y="7" width="66" height="16"/>
+                                                                            <textFieldCell key="cell" lineBreakMode="clipping" title="Text Color" id="dHX-mo-IxV">
+                                                                                <font key="font" usesAppearanceFont="YES"/>
+                                                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                                            </textFieldCell>
+                                                                        </textField>
+                                                                        <colorWell translatesAutoresizingMaskIntoConstraints="NO" id="Drf-D8-ifS">
+                                                                            <rect key="frame" x="122" y="0.0" width="30" height="30"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" constant="30" id="63y-ZW-PZG"/>
+                                                                            </constraints>
+                                                                            <color key="color" red="0.05813049898" green="0.055541899059999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            <connections>
+                                                                                <action selector="colorWellChangedColor:" target="OnV-1o-TdF" id="UDc-aA-Thg"/>
+                                                                            </connections>
+                                                                        </colorWell>
+                                                                    </subviews>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="width" constant="30" id="63y-ZW-PZG"/>
+                                                                        <constraint firstAttribute="height" constant="30" id="lrd-VZ-hom"/>
                                                                     </constraints>
-                                                                    <color key="color" red="0.05813049898" green="0.055541899059999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                                    <connections>
-                                                                        <action selector="colorWellChangedColor:" target="OnV-1o-TdF" id="UDc-aA-Thg"/>
-                                                                    </connections>
-                                                                </colorWell>
+                                                                    <visibilityPriorities>
+                                                                        <integer value="1000"/>
+                                                                        <integer value="1000"/>
+                                                                    </visibilityPriorities>
+                                                                    <customSpacing>
+                                                                        <real value="3.4028234663852886e+38"/>
+                                                                        <real value="3.4028234663852886e+38"/>
+                                                                    </customSpacing>
+                                                                </stackView>
+                                                                <stackView distribution="fill" orientation="horizontal" alignment="centerY" spacing="224" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OfD-6w-l0v">
+                                                                    <rect key="frame" x="0.0" y="30" width="142" height="30"/>
+                                                                    <subviews>
+                                                                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bIe-IY-DyF">
+                                                                            <rect key="frame" x="-2" y="6" width="146" height="18"/>
+                                                                            <buttonCell key="cell" type="check" title="Use a 24-hour clock" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="uY1-TC-JYq">
+                                                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                                <font key="font" metaFont="system"/>
+                                                                            </buttonCell>
+                                                                            <connections>
+                                                                                <action selector="militaryTimeBoxCheckChanged:" target="OnV-1o-TdF" id="SMh-ol-dOA"/>
+                                                                            </connections>
+                                                                        </button>
+                                                                    </subviews>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="30" id="Vbp-Gl-jl2"/>
+                                                                    </constraints>
+                                                                    <visibilityPriorities>
+                                                                        <integer value="1000"/>
+                                                                    </visibilityPriorities>
+                                                                    <customSpacing>
+                                                                        <real value="3.4028234663852886e+38"/>
+                                                                    </customSpacing>
+                                                                </stackView>
+                                                                <stackView distribution="fill" orientation="horizontal" alignment="centerY" spacing="224" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3nI-aa-5e1">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="113" height="30"/>
+                                                                    <subviews>
+                                                                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="F5p-4a-jZS">
+                                                                            <rect key="frame" x="-2" y="6" width="117" height="18"/>
+                                                                            <buttonCell key="cell" type="check" title="Show as analog" bezelStyle="regularSquare" imagePosition="left" inset="2" id="3cC-BX-Fd0">
+                                                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                                <font key="font" metaFont="system"/>
+                                                                            </buttonCell>
+                                                                            <connections>
+                                                                                <action selector="showAsAnalogCheckChanged:" target="OnV-1o-TdF" id="b7H-yt-MKb"/>
+                                                                            </connections>
+                                                                        </button>
+                                                                    </subviews>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="30" id="5lb-51-gXn"/>
+                                                                    </constraints>
+                                                                    <visibilityPriorities>
+                                                                        <integer value="1000"/>
+                                                                    </visibilityPriorities>
+                                                                    <customSpacing>
+                                                                        <real value="3.4028234663852886e+38"/>
+                                                                    </customSpacing>
+                                                                </stackView>
                                                             </subviews>
                                                             <constraints>
-                                                                <constraint firstAttribute="trailing" secondItem="Drf-D8-ifS" secondAttribute="trailing" id="8fU-FT-OvI"/>
-                                                                <constraint firstAttribute="height" constant="30" id="lrd-VZ-hom"/>
+                                                                <constraint firstAttribute="trailing" secondItem="Hrp-j5-Plg" secondAttribute="trailing" id="CqL-UJ-Zcm"/>
+                                                                <constraint firstItem="OfD-6w-l0v" firstAttribute="leading" secondItem="FRL-1z-5j9" secondAttribute="leading" id="ij8-HM-lyR"/>
+                                                                <constraint firstItem="Hrp-j5-Plg" firstAttribute="leading" secondItem="FRL-1z-5j9" secondAttribute="leading" id="pRm-Ka-EJ1"/>
                                                             </constraints>
                                                             <visibilityPriorities>
+                                                                <integer value="1000"/>
                                                                 <integer value="1000"/>
                                                                 <integer value="1000"/>
                                                             </visibilityPriorities>
                                                             <customSpacing>
                                                                 <real value="3.4028234663852886e+38"/>
                                                                 <real value="3.4028234663852886e+38"/>
-                                                            </customSpacing>
-                                                        </stackView>
-                                                        <stackView distribution="fill" orientation="horizontal" alignment="centerY" spacing="224" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OfD-6w-l0v">
-                                                            <rect key="frame" x="0.0" y="30" width="330" height="30"/>
-                                                            <subviews>
-                                                                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bIe-IY-DyF">
-                                                                    <rect key="frame" x="-2" y="6" width="334" height="18"/>
-                                                                    <buttonCell key="cell" type="check" title="Use a 24-hour clock" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="uY1-TC-JYq">
-                                                                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                                        <font key="font" metaFont="system"/>
-                                                                    </buttonCell>
-                                                                    <connections>
-                                                                        <action selector="militaryTimeBoxCheckChanged:" target="OnV-1o-TdF" id="SMh-ol-dOA"/>
-                                                                    </connections>
-                                                                </button>
-                                                            </subviews>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="30" id="Vbp-Gl-jl2"/>
-                                                            </constraints>
-                                                            <visibilityPriorities>
-                                                                <integer value="1000"/>
-                                                            </visibilityPriorities>
-                                                            <customSpacing>
-                                                                <real value="3.4028234663852886e+38"/>
-                                                            </customSpacing>
-                                                        </stackView>
-                                                        <stackView distribution="fill" orientation="horizontal" alignment="centerY" spacing="224" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3nI-aa-5e1">
-                                                            <rect key="frame" x="0.0" y="0.0" width="113" height="30"/>
-                                                            <subviews>
-                                                                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="F5p-4a-jZS">
-                                                                    <rect key="frame" x="-2" y="6" width="117" height="18"/>
-                                                                    <buttonCell key="cell" type="check" title="Show as analog" bezelStyle="regularSquare" imagePosition="left" inset="2" id="3cC-BX-Fd0">
-                                                                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                                        <font key="font" metaFont="system"/>
-                                                                    </buttonCell>
-                                                                    <connections>
-                                                                        <action selector="showAsAnalogCheckChanged:" target="OnV-1o-TdF" id="b7H-yt-MKb"/>
-                                                                    </connections>
-                                                                </button>
-                                                            </subviews>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="30" id="5lb-51-gXn"/>
-                                                            </constraints>
-                                                            <visibilityPriorities>
-                                                                <integer value="1000"/>
-                                                            </visibilityPriorities>
-                                                            <customSpacing>
                                                                 <real value="3.4028234663852886e+38"/>
                                                             </customSpacing>
                                                         </stackView>
                                                     </subviews>
                                                     <constraints>
-                                                        <constraint firstAttribute="trailing" secondItem="OfD-6w-l0v" secondAttribute="trailing" id="9Yu-Df-Kbt"/>
-                                                        <constraint firstItem="OfD-6w-l0v" firstAttribute="leading" secondItem="FRL-1z-5j9" secondAttribute="leading" id="ij8-HM-lyR"/>
-                                                        <constraint firstItem="Hrp-j5-Plg" firstAttribute="leading" secondItem="FRL-1z-5j9" secondAttribute="leading" id="pRm-Ka-EJ1"/>
-                                                        <constraint firstAttribute="trailing" secondItem="Hrp-j5-Plg" secondAttribute="trailing" id="whd-s3-N03"/>
+                                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="FRL-1z-5j9" secondAttribute="bottom" constant="10" id="KaD-lS-D2B"/>
+                                                        <constraint firstAttribute="trailing" secondItem="FRL-1z-5j9" secondAttribute="trailing" constant="20" id="Zsd-Ir-h5f"/>
+                                                        <constraint firstItem="FRL-1z-5j9" firstAttribute="leading" secondItem="O8m-Q7-tOI" secondAttribute="leading" constant="20" id="fob-Qu-Tbm"/>
+                                                        <constraint firstItem="FRL-1z-5j9" firstAttribute="top" secondItem="O8m-Q7-tOI" secondAttribute="top" constant="10" id="juJ-aH-65I"/>
                                                     </constraints>
-                                                    <visibilityPriorities>
-                                                        <integer value="1000"/>
-                                                        <integer value="1000"/>
-                                                        <integer value="1000"/>
-                                                    </visibilityPriorities>
-                                                    <customSpacing>
-                                                        <real value="3.4028234663852886e+38"/>
-                                                        <real value="3.4028234663852886e+38"/>
-                                                        <real value="3.4028234663852886e+38"/>
-                                                    </customSpacing>
-                                                </stackView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="FRL-1z-5j9" secondAttribute="bottom" constant="10" id="KaD-lS-D2B"/>
-                                                <constraint firstAttribute="trailing" secondItem="FRL-1z-5j9" secondAttribute="trailing" constant="20" id="Mkz-HX-oEi"/>
-                                                <constraint firstItem="FRL-1z-5j9" firstAttribute="leading" secondItem="O8m-Q7-tOI" secondAttribute="leading" constant="20" id="fob-Qu-Tbm"/>
-                                                <constraint firstItem="FRL-1z-5j9" firstAttribute="top" secondItem="O8m-Q7-tOI" secondAttribute="top" constant="10" id="juJ-aH-65I"/>
-                                            </constraints>
-                                        </view>
-                                    </box>
+                                                </view>
+                                            </box>
+                                            <box title="Stopwatch" translatesAutoresizingMaskIntoConstraints="NO" id="hZp-xT-8Ca">
+                                                <rect key="frame" x="199" y="16" width="198" height="165"/>
+                                                <view key="contentView" id="dZO-D4-wGO">
+                                                    <rect key="frame" x="3" y="3" width="192" height="147"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <subviews>
+                                                        <switch horizontalHuggingPriority="750" verticalHuggingPriority="750" baseWritingDirection="leftToRight" alignment="left" translatesAutoresizingMaskIntoConstraints="NO" id="YIJ-Qm-lcL">
+                                                            <rect key="frame" x="18" y="104" width="42" height="24"/>
+                                                            <connections>
+                                                                <action selector="useStopwatchFlipped:" target="OnV-1o-TdF" id="gA8-ZM-Vt6"/>
+                                                            </connections>
+                                                        </switch>
+                                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="rbs-mp-Oep">
+                                                            <rect key="frame" x="64" y="109" width="96" height="16"/>
+                                                            <textFieldCell key="cell" lineBreakMode="clipping" title="Use Stopwatch" id="IZc-cG-dU6">
+                                                                <font key="font" usesAppearanceFont="YES"/>
+                                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                            </textFieldCell>
+                                                        </textField>
+                                                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vaK-Bh-p7p">
+                                                            <rect key="frame" x="61" y="56" width="70" height="32"/>
+                                                            <buttonCell key="cell" type="push" title="Start" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="IHe-0v-bFW">
+                                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                                <font key="font" metaFont="system"/>
+                                                            </buttonCell>
+                                                            <connections>
+                                                                <action selector="stopwatchStartPressed:" target="OnV-1o-TdF" id="Rhe-PL-2aI"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Tpe-Fq-rZt">
+                                                            <rect key="frame" x="59" y="23" width="75" height="32"/>
+                                                            <buttonCell key="cell" type="push" title="Reset" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="OKR-De-aFO">
+                                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                                <font key="font" metaFont="system"/>
+                                                            </buttonCell>
+                                                            <connections>
+                                                                <action selector="stopwatchResetPressed:" target="OnV-1o-TdF" id="kME-il-5Eg"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="Tpe-Fq-rZt" firstAttribute="top" secondItem="vaK-Bh-p7p" secondAttribute="bottom" constant="12" id="6fE-ow-4p6"/>
+                                                        <constraint firstItem="vaK-Bh-p7p" firstAttribute="top" secondItem="YIJ-Qm-lcL" secondAttribute="bottom" constant="22" id="7Zs-9D-Aau"/>
+                                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Tpe-Fq-rZt" secondAttribute="bottom" constant="30" id="HhU-Bb-ew0"/>
+                                                        <constraint firstItem="YIJ-Qm-lcL" firstAttribute="leading" secondItem="dZO-D4-wGO" secondAttribute="leading" constant="20" id="Pbb-vP-uR3"/>
+                                                        <constraint firstAttribute="trailing" secondItem="rbs-mp-Oep" secondAttribute="trailing" constant="34" id="QxR-vs-V0Z"/>
+                                                        <constraint firstItem="Tpe-Fq-rZt" firstAttribute="centerX" secondItem="dZO-D4-wGO" secondAttribute="centerX" id="RMf-2n-Rgy"/>
+                                                        <constraint firstItem="rbs-mp-Oep" firstAttribute="leading" secondItem="YIJ-Qm-lcL" secondAttribute="trailing" constant="8" id="RYQ-hh-MWg"/>
+                                                        <constraint firstItem="rbs-mp-Oep" firstAttribute="centerY" secondItem="YIJ-Qm-lcL" secondAttribute="centerY" id="Xx5-uo-K8Z"/>
+                                                        <constraint firstItem="YIJ-Qm-lcL" firstAttribute="top" secondItem="dZO-D4-wGO" secondAttribute="top" constant="20" id="jpJ-F1-evW"/>
+                                                        <constraint firstItem="vaK-Bh-p7p" firstAttribute="centerX" secondItem="dZO-D4-wGO" secondAttribute="centerX" id="wIe-Hn-eX4"/>
+                                                    </constraints>
+                                                </view>
+                                            </box>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="hZp-xT-8Ca" secondAttribute="bottom" constant="20" id="HRG-K9-JBj"/>
+                                            <constraint firstAttribute="bottom" secondItem="5aU-it-HTy" secondAttribute="bottom" constant="20" id="RZ1-MV-bdS"/>
+                                            <constraint firstItem="hZp-xT-8Ca" firstAttribute="top" secondItem="5aU-it-HTy" secondAttribute="top" id="rUj-Do-kip"/>
+                                        </constraints>
+                                        <visibilityPriorities>
+                                            <integer value="1000"/>
+                                            <integer value="1000"/>
+                                        </visibilityPriorities>
+                                        <customSpacing>
+                                            <real value="3.4028234663852886e+38"/>
+                                            <real value="3.4028234663852886e+38"/>
+                                        </customSpacing>
+                                    </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="5aU-it-HTy" secondAttribute="trailing" id="Bl5-VZ-Mz2"/>
+                                    <constraint firstAttribute="trailing" secondItem="azD-Nf-Qh2" secondAttribute="trailing" id="EgZ-aT-oWw"/>
                                     <constraint firstAttribute="trailing" secondItem="v4F-e8-rZ4" secondAttribute="trailing" id="NmI-f6-IhX"/>
                                     <constraint firstItem="v4F-e8-rZ4" firstAttribute="leading" secondItem="83c-ol-zxf" secondAttribute="leading" id="Trm-1Z-Z8Q"/>
-                                    <constraint firstItem="5aU-it-HTy" firstAttribute="leading" secondItem="83c-ol-zxf" secondAttribute="leading" id="hA5-bC-Yjr"/>
+                                    <constraint firstItem="azD-Nf-Qh2" firstAttribute="leading" secondItem="83c-ol-zxf" secondAttribute="leading" id="pF8-13-65g"/>
                                 </constraints>
                                 <visibilityPriorities>
                                     <integer value="1000"/>
@@ -1257,6 +1328,7 @@
                     <connections>
                         <outlet property="colorWell" destination="Drf-D8-ifS" id="FXb-2T-CAn"/>
                         <outlet property="currentTimeDisplay" destination="jAG-OZ-bLR" id="G0o-eh-gEf"/>
+                        <outlet property="stopwatchStartButton" destination="vaK-Bh-p7p" id="dZC-LF-AHl"/>
                         <outlet property="useAnalogCheckbox" destination="F5p-4a-jZS" id="7fm-jB-Szk"/>
                         <outlet property="useMilitaryTimeCheckbox" destination="bIe-IY-DyF" id="Kxa-7m-Jcs"/>
                     </connections>
